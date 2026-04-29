@@ -1,63 +1,59 @@
-import Image from "next/image";
+import Navbar from "./components/ui/Navbar";
+import SearchBar from "./components/ui/SearchBar";
+import FilterChips from "./components/ui/FilterChips";
+import FeaturedGrid from "./components/ui/FeaturedGrid";
+import PropertyGrid from "./components/ui/PropertyGrid";
+import { mockProperties, featuredProperties } from "./data/mockProperties";
 
-export default function Home() {
+const categories = ["All", "House", "Apartment", "Villa", "Penthouse"];
+
+export default function HomeScreen() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="min-h-screen bg-[var(--background)] transition-colors duration-300">
+      <Navbar />
+
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        {/* Hero Section */}
+        <section className="py-12 md:py-16">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            {/* Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-[var(--foreground)] leading-tight">
+              Find your{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10 font-medium">sanctuary</span>
+                <span className="absolute bottom-2 left-0 w-full h-3 bg-[var(--mosque)]/20 -rotate-1 z-0"></span>
+              </span>
+              .
+            </h1>
+
+            {/* Search Bar */}
+            <SearchBar />
+
+            {/* Filter Chips */}
+            <FilterChips categories={categories} />
+          </div>
+        </section>
+
+        {/* Featured Collections */}
+        <FeaturedGrid
+          properties={featuredProperties}
+          title="Featured Collections"
+          subtitle="Curated properties for the discerning eye."
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* New in Market */}
+        <PropertyGrid
+          properties={mockProperties}
+          title="New in Market"
+          subtitle="Fresh opportunities added this week."
+          showFilters={true}
+        />
+
+        {/* Load More */}
+        <div className="mt-12 text-center">
+          <button className="px-8 py-3 bg-[var(--card-bg)] border border-[var(--card-border)] hover:border-[var(--mosque)] hover:text-[var(--mosque)] text-[var(--foreground)] font-medium rounded-lg transition-all hover:shadow-md">
+            Load more properties
+          </button>
         </div>
       </main>
     </div>

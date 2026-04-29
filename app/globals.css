@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Luxe Estate Color Palette */
+  --nordic: #19322F;
+  --mosque: #006655;
+  --hint-of-green: #D9ECC8;
+  --clear-day: #EEF6F6;
+
+  /* Semantic mappings - Light */
+  --background: var(--clear-day);
+  --foreground: var(--nordic);
+  --card-bg: #ffffff;
+  --card-border: rgba(25, 50, 47, 0.1);
+  --nav-bg: rgba(238, 246, 246, 0.95);
+  --input-bg: #ffffff;
+  --muted: #5C706D;
+}
+
+/* Dark Mode */
+.dark {
+  --nordic: #EEF6F6;
+  --mosque: #4ED9C4;
+  --hint-of-green: #1a3d2e;
+  --clear-day: #0f1f23;
+
+  /* Semantic mappings - Dark */
+  --background: #0f1f23;
+  --foreground: #EEF6F6;
+  --card-bg: #1a2d32;
+  --card-border: rgba(238, 246, 246, 0.1);
+  --nav-bg: rgba(15, 31, 35, 0.95);
+  --input-bg: #1a2d32;
+  --muted: #8BA8A4;
 }
 
 @theme inline {
+  /* Luxe Estate Colors */
+  --color-nordic: var(--nordic);
+  --color-mosque: var(--mosque);
+  --color-hint-of-green: var(--hint-of-green);
+  --color-clear-day: var(--clear-day);
+
+  /* Nordics Muted variant */
+  --color-nordic-muted: #5C706D;
+
+  /* Semantic colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-nav-bg: var(--nav-bg);
+  --color-input-bg: var(--input-bg);
+  --color-muted: var(--muted);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Font family */
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Custom shadows from design */
+  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-dark: 0 10px 40px -10px rgba(0, 0, 0, 0.4);
+  --shadow-card-dark: 0 4px 6px -1px rgba(0, 0, 0, 0.2),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+
+  /* Border radius */
+  --radius-default: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hide scrollbar utility */
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
