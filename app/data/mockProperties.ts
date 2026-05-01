@@ -88,7 +88,127 @@ export const mockProperties: Property[] = [
     imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuCfGXdY0g51ojSg0GMeTW9ndLY3mpKK3oMtWxo2nwd_dwi1pgn1Boi_ovaDGIFhUA7nwu3WdBch8ZuHxoHu3QfgM5ceAsp8pglRVyCROWNcy9zeDNP2wqLoevyKGcaEyFYHYpIx2KK46nLWthnHiHugmkKw48kJsL8IjMO1bL3T1Zwt8bvQDTTUHTgB3GqZ2RU2asRzF1jVg0rLw3LWXXTq0YF1CsbhlWpYOuCEpH5bB8zkBlbKXR4At_M46AL8rJqn5c6BrPD5PP8",
     badge: "FOR RENT",
   },
-];
+  {
+    id: "7",
+    title: "Casa Colonial",
+    address: "789 Colonia St",
+    city: "Córdoba",
+    price: 750000,
+    priceType: "sale",
+    bedrooms: 4,
+    bathrooms: 3,
+    area: 160,
+    imageUrl: "https://example.com/colonial.jpg"
+  },
+  {
+    id: "8",
+    title: "Loft Industrial",
+    address: "321 Factory Ave",
+    city: "Rosario",
+    price: 4500,
+    priceType: "rent",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: 95,
+    imageUrl: "https://example.com/loft.jpg"
+  },
+  {
+    id: "9",
+    title: "Chalet de Montaña",
+    address: "657 Peak Rd",
+    city: "Bariloche",
+    price: 950000,
+    priceType: "sale",
+    bedrooms: 5,
+    bathrooms: 4,
+    area: 250,
+    imageUrl: "https://example.com/chalet.jpg"
+  },
+  {
+    id: "10",
+    title: "Departamento Centro",
+    address: "123 Main St",
+    city: "Mendoza",
+    price: 3800,
+    priceType: "rent",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: 80,
+    imageUrl: "https://example.com/depto.jpg"
+  },
+  {
+    id: "11",
+    title: "Quinta con Parque",
+    address: "456 Park Lane",
+    city: "La Plata",
+    price: 1100000,
+    priceType: "sale",
+    bedrooms: 6,
+    bathrooms: 5,
+    area: 350,
+    imageUrl: "https://example.com/quinta.jpg"
+  },
+  {
+    id: "12",
+    title: "Studio Arte",
+    address: "789 Art St",
+    city: "Salta",
+    price: 2200,
+    priceType: "rent",
+    bedrooms: 1,
+    bathrooms: 1,
+    area: 45,
+    imageUrl: "https://example.com/studio.jpg"
+  },
+  {
+    id: "13",
+    title: "Puerto Deportivo",
+    address: "321 Marina Blvd",
+    city: "Ushuaia",
+    price: 620000,
+    priceType: "sale",
+    bedrooms: 3,
+    bathrooms: 2,
+    area: 120,
+    imageUrl: "https://example.com/puerto.jpg"
+  },
+  {
+    id: "14",
+    title: "Casa de Campo",
+    address: "654 Country Rd",
+    city: "San Luis",
+    price: 480000,
+    priceType: "sale",
+    bedrooms: 4,
+    bathrooms: 3,
+    area: 180,
+    imageUrl: "https://example.com/campo.jpg"
+  },
+  {
+    id: "15",
+    title: "Penthouse Vista Mar",
+    address: "987 Ocean View",
+    city: "Mar del Plata",
+    price: 5500,
+    priceType: "rent",
+    bedrooms: 3,
+    bathrooms: 3,
+    area: 200,
+    imageUrl: "https://example.com/penthouse.jpg"
+  },
+  {
+    id: "16",
+    title: "Duplex Moderno",
+    address: "111 Modern St",
+    city: "Neuquén",
+    price: 420000,
+    priceType: "sale",
+    bedrooms: 3,
+    bathrooms: 2,
+    area: 130,
+    imageUrl: "https://example.com/duplex.jpg"
+  }
+ ];
 
 export const featuredProperties: Property[] = [
   {
